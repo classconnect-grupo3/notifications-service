@@ -14,9 +14,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY ./src/api ./src/api
 
 # Expose FastAPI port (usado solo por uvicorn)
-EXPOSE ${NOTIFICATIONS_SERVICE_PORT}
+EXPOSE ${PORT}
 
 # Por default, arranca el servidor FastAPI
-CMD uvicorn src.api.main:app --host ${NOTIFICATIONS_SERVICE_HOST} --port ${NOTIFICATIONS_SERVICE_PORT}
+CMD uvicorn src.api.main:app --host ${HOST} --port ${PORT}
 
 
