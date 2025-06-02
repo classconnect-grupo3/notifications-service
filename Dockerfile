@@ -17,6 +17,6 @@ COPY ./src/api ./src/api
 EXPOSE ${PORT}
 
 # Por default, arranca el servidor FastAPI
-CMD uvicorn src.api.main:app --host ${HOST} --port ${PORT}
+CMD uvicorn src.main:app --host ${HOST} --port ${PORT}
 
 
