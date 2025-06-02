@@ -1,12 +1,6 @@
 fastapi
 uvicorn
-pika
-firebase-admin
-aiosmtplib
 python-dotenv
-email-validator
-aiohttp
-httpx
 pydantic==2.10.6
 pydantic_core==2.27.2
 SQLAlchemy==2.0.39
