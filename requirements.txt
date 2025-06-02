@@ -5,8 +5,9 @@ firebase-admin
 aiosmtplib
 python-dotenv
 email-validator
-pydantic
 aiohttp
 httpx
-sqlalchemy
-psycopg2
+pydantic==2.10.6
+pydantic_core==2.27.2
+SQLAlchemy==2.0.39
+psycopg2-binary==2.9.10
