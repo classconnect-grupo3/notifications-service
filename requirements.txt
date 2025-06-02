@@ -8,3 +8,4 @@ email-validator
 pydantic
 aiohttp
 httpx
+sqlalchemy
