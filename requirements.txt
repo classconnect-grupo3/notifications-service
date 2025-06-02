@@ -9,3 +9,4 @@ pydantic
 aiohttp
 httpx
 sqlalchemy
+psycopg2
