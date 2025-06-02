@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pika
+firebase-admin
+aiosmtplib
+python-dotenv
+email-validator
+pydantic
+aiohttp
+httpx
