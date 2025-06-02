@@ -1,4 +1,4 @@
-from database.db_init import initialize_database
+from src.api.database.db_init import initialize_database
 from src.api.errors.exceptions_handler import configure_exception_handlers
 from fastapi import FastAPI
 from src.api.routes import router as api_router
