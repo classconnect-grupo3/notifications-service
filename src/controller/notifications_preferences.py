@@ -1,17 +1,16 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from src.api.database.db import get_db
-from src.api.common.result import Failure
-from src.api.schemas.notification_preference import NotificationPreferenceUpdate
-from src.api.service.notifications_preferences import update_notification_preference
+from src.database.db import get_db
+from src.common.result import Failure
+from src.schemas.notification_preference import NotificationPreferenceUpdate
+from src.service.notifications_preferences import update_notification_preference
 
 router = APIRouter()
 
+
 @router.post("", status_code=200)
 async def update_user_notification_preference(
-    uid: str,
-    preference: NotificationPreferenceUpdate,
-    db: Session = Depends(get_db)
+    uid: str, preference: NotificationPreferenceUpdate, db: Session = Depends(get_db)
 ):
     result = await update_notification_preference(db, uid, preference)
 

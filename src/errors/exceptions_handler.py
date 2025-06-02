@@ -3,7 +3,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from sqlalchemy.exc import SQLAlchemyError
 
-from src.api.schemas.error_response import ErrorResponse
+from src.schemas.error_response import ErrorResponse
 
 
 def configure_exception_handlers(app: FastAPI):
@@ -25,4 +25,3 @@ def configure_exception_handlers(app: FastAPI):
         return JSONResponse(
             status_code=exc.status_code, content=error_response.model_dump()
         )
-    

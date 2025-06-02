@@ -1,4 +1,4 @@
-from src.api.database.db import Base, engine
+from src.database.db import Base, engine
 
 
 def initialize_database():
