@@ -3,7 +3,7 @@ from datetime import datetime
 from src.database.db import Base
 
 class UserToken(Base):
-    __tablename__ = "user_tokens"
+    __tablename__ = "user_fcm_tokens"
 
     token = Column(String, primary_key=True)  # token único generado por Firebase
     uid = Column(String, index=True)
