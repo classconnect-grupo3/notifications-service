@@ -17,6 +17,6 @@ router.include_router(
 
 router.include_router(
     fcm_token_router,
-    prefix="user",
+    prefix="/user",
     tags=["FCM Token"],
 )
