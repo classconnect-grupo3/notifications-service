@@ -21,3 +21,13 @@ def save_token(db: Session, uid: str, fcm_token: str) -> UserToken:
 
 def get_tokens_by_uid(db: Session, uid: str) -> list[UserToken]:
     return db.query(UserToken).filter_by(uid=uid).all()
+
+
+def delete_token(db: Session, fcm_token: str) -> bool:
+    token = db.query(UserToken).filter_by(fcm_token=fcm_token).first()
+    if not token:
+        return False
+
+    db.delete(token)
+    db.commit()
+    return True
