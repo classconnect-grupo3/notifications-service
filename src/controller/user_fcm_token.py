@@ -23,7 +23,7 @@ def save_token(request: FCMTokenRequest, db: Session = Depends(get_db)):
     return result.value
 
 
-@router.get("/tokens", status_code=200, response_model=list[FCMTokenResponse])
+@router.get("/tokens/{uid}", status_code=200, response_model=list[FCMTokenResponse])
 def list_tokens(uid: str, db: Session = Depends(get_db)):
     result = get_fcm_tokens(db, uid)
 
