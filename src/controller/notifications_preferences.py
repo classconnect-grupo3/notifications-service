@@ -8,7 +8,7 @@ from src.service.notifications_preferences import update_notification_preference
 router = APIRouter()
 
 
-@router.post("", status_code=200)
+@router.post("preferences", status_code=200)
 async def update_user_notification_preference(
     uid: str, preference: NotificationPreferenceUpdate, db: Session = Depends(get_db)
 ):
