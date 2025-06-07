@@ -10,7 +10,7 @@ router = APIRouter()
 
 router.include_router(
     notifications_preferences_router,
-    prefix="/preferences",
+    prefix="/notifications",
     tags=["Notification Preferences"],
 )
 
